@@ -45,7 +45,7 @@ class Card{
   
 }
 
-colors = ["Yellow", "Blue", "Red", "Green", ];
+colors = ["Yellow", "Blue", "Red", "Green" ];
 cards_unshuffled = []
 
 for(let i = 0; i < colors.length; i++){
