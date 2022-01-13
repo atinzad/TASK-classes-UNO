@@ -31,6 +31,28 @@
 let cards = []; // You will use this array in step 6
 
 // Continue the code here 👇🏻
+class Card{
+  constructor(number, color){
+    this.number = number;
+    this.color = color;
+  }
+
+  image(){
+    return `./images/${this.color}_${this.number}.png`
+  }
+
+
+  
+}
+
+colors = ["Yellow", "Blue", "Red", "Green", ];
+
+for(let i = 0; i < colors.length; i++){
+  for(let j =0; j < 10; j++){
+    const x = new Card(j, colors[i])
+    cards.push(x,x);
+  }
+}
 
 /**
  *
@@ -42,5 +64,8 @@ function render(array) {
     .map(cardComponent)
     .join("");
 }
+
+
+
 
 render(cards);
