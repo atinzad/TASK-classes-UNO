@@ -46,14 +46,18 @@ class Card{
 }
 
 colors = ["Yellow", "Blue", "Red", "Green", ];
+cards_unshuffled = []
 
 for(let i = 0; i < colors.length; i++){
   for(let j =0; j < 10; j++){
     const x = new Card(j, colors[i])
-    cards.push(x,x);
+    const y = new Card(j, colors[i])
+    cards_unshuffled.push(x,y);
   }
 }
 
+cards = cards_unshuffled.map((value) => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value)
+// credit: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 /**
  *
  * Don't touch this code
